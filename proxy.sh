@@ -11,6 +11,6 @@ rm -rf /usr/local/bin/clnc
 echo "/etc/clnc/clnc -c /etc/clnc/clnc.conf" >> /usr/local/bin/clnc
 chmod +x /usr/local/bin/clnc
 sed -i 's/^EnableExtraShell=.*/EnableExtraShell="true"/g' /jd/config/config.sh
-sed -i 's/node /proxychains -q node /g' jd.sh
+sed -i 's/node /proxychains -q node /g' /jd/jd.sh
 echo "sed -i 's/node /proxychains -q node /g' jd.sh" >> /jd/config/diy.sh
 clnc
