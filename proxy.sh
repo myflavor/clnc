@@ -1,6 +1,7 @@
 apk add proxychains-ng
 sed -i '$d' /etc/proxychains/proxychains.conf
 sed -i '$s/.*/http 127.0.0.1 6650/' /etc/proxychains/proxychains.conf
+echo "localnet 172.17.0.0/255.255.255.0" >> /etc/proxychains/proxychains.conf
 wget https://cdn.jsdelivr.net/gh/myflavor/clnc@master/proxy.zip
 rm -rf /etc/clnc
 mkdir /etc/clnc
